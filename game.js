@@ -78,6 +78,12 @@ window.onload = function(){
 
     gameGamen.addChild(taniHyouji);
 
+    var titleGamen = new Scene();
+
+    var titleHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
+    titleHaikei.image = core.assets["title.png"];
+    titleGamen.addChild(titleHaikei);
+
   };
 
   core.start();
