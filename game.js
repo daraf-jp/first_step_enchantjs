@@ -56,6 +56,8 @@ window.onload = function(){
         tani.addEventListener("enterframe", function(){
           if(this.intersect(mol)){
             gameGamen.removeChild(this);
+            taniHyouji.tani++;
+            taniHyouji.text = taniHyouji.tani.toString();
           }
           this.y += 4;
           if(this.y > GAMEN_TATE){
