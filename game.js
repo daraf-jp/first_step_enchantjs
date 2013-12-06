@@ -65,6 +65,17 @@ window.onload = function(){
       }
     });
 
+    var taniHyouji = new Label();
+    taniHyouji.tani = 0;
+    taniHyouji.text = taniHyouji.tani;
+    taniHyouji.width = 600;
+    taniHyouji.textAlign = "center";
+    taniHyouji.font = "80px Serif";
+    taniHyouji.color = "white";
+    taniHyouji.moveTo(325, 250);
+
+    gameGamen.addChild(taniHyouji);
+
   };
 
   core.start();
