@@ -47,12 +47,16 @@ window.onload = function(){
 
     var tani = new Sprite(95, 100);
     tani.image = core.assets["print.png"];
-    tani.moveTo(400, 200);
+    tani.moveTo(400, -tani.height);
 
     gameGamen.addChild(tani);
 
     tani.addEventListener("enterframe", function(){
       if(this.intersect(mol)){
+        gameGamen.removeChild(this);
+      }
+      this.y += 4;
+      if(this.y > GAMEN_TATE){
         gameGamen.removeChild(this);
       }
     });
