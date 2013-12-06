@@ -100,6 +100,11 @@ window.onload = function(){
 
     gameGamen.addChild(jikanHyouji);
 
+    jikanHyouji.addEventListener("enterframe", function(){
+      nokoriJikan -= 1 / core.fps;
+      this.text = nokoriJikan.toFixed(2).toString();
+    });
+
   };
 
   core.start();
