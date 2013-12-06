@@ -24,6 +24,10 @@ window.onload = function(){
     var gameGamen = new Scene();
     core.pushScene(gameGamen);
 
+    var gameHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
+    gameHaikei.image = core.assets["game.png"];
+    gameGamen.addChild(gameHaikei);
+
     var mol = new Sprite(151, 169);
     mol.image = core.assets["mol.png"];
     mol.moveTo(300, 500);
