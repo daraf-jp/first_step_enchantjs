@@ -40,7 +40,7 @@ window.onload = function(){
       }
 
       this.x = e.x - this.width / 2;
-      this.y = e.y - this.height / 2;
+      // this.y = e.y - this.height / 2;
     });
 
     gameGamen.addChild(mol);
