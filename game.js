@@ -105,6 +105,13 @@ window.onload = function(){
       this.text = nokoriJikan.toFixed(2).toString();
     });
 
+    var gameOverGamen = new Scene();
+
+    var gameOverHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
+    gameOverHaikei.image = core.assets["game_over1.png"];
+
+    gameOverGamen.addChild(gameOverHaikei);
+
   };
 
   core.start();
