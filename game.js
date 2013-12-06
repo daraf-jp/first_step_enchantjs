@@ -28,6 +28,12 @@ window.onload = function(){
     mol.image = core.assets["mol.png"];
     mol.moveTo(300, 500);
 
+    mol.addEventListener("touchmove", function(e){
+
+      this.x = e.x - this.width / 2;
+      this.y = e.y - this.height / 2;
+    });
+
     gameGamen.addChild(mol);
 
   };
