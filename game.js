@@ -65,6 +65,15 @@ window.onload = function(){
         });
       }
       if(nokoriJikan < 0){
+        var gameOverHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
+
+        if(taniHyouji.tani < 20){
+          gameOverHaikei.image = core.assets["game_over1.png"];
+        }else{
+          gameOverHaikei.image = core.assets["game_over2.png"];
+        }
+
+        gameOverGamen.addChild(gameOverHaikei);
         core.replaceScene(gameOverGamen);
       }
     });
@@ -109,11 +118,6 @@ window.onload = function(){
     });
 
     var gameOverGamen = new Scene();
-
-    var gameOverHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
-    gameOverHaikei.image = core.assets["game_over1.png"];
-
-    gameOverGamen.addChild(gameOverHaikei);
 
   };
 
