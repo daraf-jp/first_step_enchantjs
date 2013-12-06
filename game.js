@@ -84,6 +84,10 @@ window.onload = function(){
     titleHaikei.image = core.assets["title.png"];
     titleGamen.addChild(titleHaikei);
 
+    titleGamen.addEventListener("touchstart", function(){
+      core.replaceScene(gameGamen);
+    });
+
   };
 
   core.start();
