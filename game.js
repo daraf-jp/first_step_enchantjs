@@ -20,6 +20,10 @@ window.onload = function(){
   core.preload(gazou);
 
   core.onload = function(){
+
+    var gameGamen = new Scene();
+    core.pushScene(gameGamen);
+
   };
 
   core.start();
