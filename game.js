@@ -51,6 +51,12 @@ window.onload = function(){
 
     gameGamen.addChild(tani);
 
+    tani.addEventListener("enterframe", function(){
+      if(this.intersect(mol)){
+        gameGamen.removeChild(this);
+      }
+    });
+
   };
 
   core.start();
