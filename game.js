@@ -24,6 +24,12 @@ window.onload = function(){
     var gameGamen = new Scene();
     core.pushScene(gameGamen);
 
+    var mol = new Sprite(151, 169);
+    mol.image = core.assets["mol.png"];
+    mol.moveTo(300, 500);
+
+    gameGamen.addChild(mol);
+
   };
 
   core.start();
