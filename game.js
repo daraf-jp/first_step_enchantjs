@@ -45,6 +45,12 @@ window.onload = function(){
 
     gameGamen.addChild(mol);
 
+    var tani = new Sprite(95, 100);
+    tani.image = core.assets["print.png"];
+    tani.moveTo(400, 200);
+
+    gameGamen.addChild(tani);
+
   };
 
   core.start();
