@@ -64,6 +64,9 @@ window.onload = function(){
           }
         });
       }
+      if(nokoriJikan < 0){
+        core.replaceScene(gameOverGamen);
+      }
     });
 
     var taniHyouji = new Label();
