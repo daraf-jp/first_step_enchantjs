@@ -88,6 +88,18 @@ window.onload = function(){
       core.replaceScene(gameGamen);
     });
 
+    var nokoriJikan = 30;
+
+    var jikanHyouji = new Label();
+    jikanHyouji.text = nokoriJikan;
+    jikanHyouji.width = 180;
+    jikanHyouji.textAlign = "center";
+    jikanHyouji.moveTo(25, 65);
+    jikanHyouji.font = "48px Serif";
+    jikanHyouji.color = "white";
+
+    gameGamen.addChild(jikanHyouji);
+
   };
 
   core.start();
