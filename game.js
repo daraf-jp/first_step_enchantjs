@@ -22,7 +22,6 @@ window.onload = function(){
   core.onload = function(){
 
     var gameGamen = new Scene();
-    core.pushScene(gameGamen);
 
     var gameHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
     gameHaikei.image = core.assets["game.png"];
@@ -79,6 +78,7 @@ window.onload = function(){
     gameGamen.addChild(taniHyouji);
 
     var titleGamen = new Scene();
+    core.pushScene(titleGamen);
 
     var titleHaikei = new Sprite(GAMEN_YOKO, GAMEN_TATE);
     titleHaikei.image = core.assets["title.png"];
