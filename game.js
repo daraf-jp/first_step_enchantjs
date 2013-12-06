@@ -45,19 +45,23 @@ window.onload = function(){
 
     gameGamen.addChild(mol);
 
-    var tani = new Sprite(95, 100);
-    tani.image = core.assets["print.png"];
-    tani.moveTo(400, -tani.height);
+    gameGamen.addEventListener("enterframe", function(){
+      if(this.age % 30 == 0){
+        var tani = new Sprite(95, 100);
+        tani.image = core.assets["print.png"];
+        tani.moveTo(Math.random() * (GAMEN_YOKO - tani.width), -tani.height);
 
-    gameGamen.addChild(tani);
+        gameGamen.addChild(tani);
 
-    tani.addEventListener("enterframe", function(){
-      if(this.intersect(mol)){
-        gameGamen.removeChild(this);
-      }
-      this.y += 4;
-      if(this.y > GAMEN_TATE){
-        gameGamen.removeChild(this);
+        tani.addEventListener("enterframe", function(){
+          if(this.intersect(mol)){
+            gameGamen.removeChild(this);
+          }
+          this.y += 4;
+          if(this.y > GAMEN_TATE){
+            gameGamen.removeChild(this);
+          }
+        });
       }
     });
 
